@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var number = 0
     var body: some View {
-        Text("Hello, world!")
-            .padding()//test
+        VStack {
+            Text("\(number)")
+            Button(action: {self.number += 1}) { //この部分がボタンのアクション内容
+                Text("カウント") //この部分がボタンの中身
+                //ボタンは引数が値ではなく文になる
+            }
+        }
     }
 }
 
